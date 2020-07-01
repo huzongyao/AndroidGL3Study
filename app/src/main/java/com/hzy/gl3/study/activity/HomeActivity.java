@@ -28,6 +28,9 @@ public class HomeActivity extends AppCompatActivity {
         mEntryData.add(new EntryInfo("Simple Color", SampleId.SAMPLE_SIMPLE_COLOR));
         mEntryData.add(new EntryInfo("Simple Shape", SampleId.SAMPLE_SIMPLE_SHAPE));
         mEntryData.add(new EntryInfo("Colorful Shape", SampleId.SAMPLE_COLOR_SHAPE));
+        mEntryData.add(new EntryInfo("Line Cube", SampleId.SAMPLE_LINE_CUBE));
+        mEntryData.add(new EntryInfo("Color Cube", SampleId.SAMPLE_COLOR_CUBE));
+        mEntryData.add(new EntryInfo("Bitmap Texture", SampleId.SAMPLE_BITMAP_TEXTURE));
         mRecyclerList.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerList.setAdapter(new EntryListAdapter(this, mEntryData));
     }

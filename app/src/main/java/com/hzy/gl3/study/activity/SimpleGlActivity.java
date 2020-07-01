@@ -10,9 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.hzy.gl3.study.bean.EntryInfo;
 import com.hzy.gl3.study.constant.SampleId;
+import com.hzy.gl3.study.renderer.ColorCubeRenderer;
 import com.hzy.gl3.study.renderer.ColorShapeRenderer;
+import com.hzy.gl3.study.renderer.LineCubeRenderer;
 import com.hzy.gl3.study.renderer.SimpleColorRenderer;
 import com.hzy.gl3.study.renderer.SimpleShapeRenderer;
+import com.hzy.gl3.study.renderer.TextureRenderer;
 import com.hzy.gl3.study.view.SimpleGlView;
 
 public class SimpleGlActivity extends AppCompatActivity {
@@ -45,6 +48,12 @@ public class SimpleGlActivity extends AppCompatActivity {
                 return new SimpleShapeRenderer();
             case SampleId.SAMPLE_COLOR_SHAPE:
                 return new ColorShapeRenderer();
+            case SampleId.SAMPLE_LINE_CUBE:
+                return new LineCubeRenderer();
+            case SampleId.SAMPLE_COLOR_CUBE:
+                return new ColorCubeRenderer();
+            case SampleId.SAMPLE_BITMAP_TEXTURE:
+                return new TextureRenderer();
             default:
                 return new SimpleColorRenderer();
         }
